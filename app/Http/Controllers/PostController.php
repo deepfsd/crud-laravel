@@ -68,7 +68,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $data = $request->validate([
-            'title'=> 'required|string|max:500',
+            'title'=> 'required|string|max:300',
             'image'=> 'sometimes|file|mimes:png,jpg,webp,jpeg|max:1024',
             'body'=> 'required|string|max:250',
         ]);
